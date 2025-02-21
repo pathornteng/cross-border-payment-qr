@@ -32,23 +32,22 @@ var TRANSACTION_CURRENCY_THB = "764";
 var COUNTRY_CODE_TH = "TH";
 var TRANSACTION_CURRENCY_KRW = "410";
 var COUNTRY_CODE_KR = "KR";
-var TRANSACTION_CURRENCY_AU = "	036";
+var TRANSACTION_CURRENCY_AU = "36";
 var COUNTRY_CODE_AU = "AU";
 
 function generatePayload(target, options) {
-  console.log(target);
+  console.log("ID", target);
+  console.log(options);
 
   var amount = options.amount;
   var country = options.country;
   var countryCode = "";
   var currencyCode = "";
 
-  console.log(options);
-
   if (country == COUNTRY_CODE_TH) {
     countryCode = COUNTRY_CODE_TH;
     currencyCode = TRANSACTION_CURRENCY_THB;
-  } else if (country == COUNTRY_CODE_TH) {
+  } else if (country == COUNTRY_CODE_KR) {
     countryCode = COUNTRY_CODE_KR;
     currencyCode = TRANSACTION_CURRENCY_KRW;
   } else if (country == COUNTRY_CODE_AU) {
