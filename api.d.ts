@@ -65,5 +65,12 @@ export namespace generatePayload {
      * If specified, some banking apps will prefill the amount field.
      */
     amount?: number;
+
+    /**
+     * The country of QR code
+     * @remarks
+     * The country that generates the QR code
+     */
+    country: string;
   }
 }
